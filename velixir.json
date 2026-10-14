@@ -1,0 +1,13 @@
+{
+  "name": "Uptime Kuma",
+  "tagline": "Know the moment your sites go down: checks every minute or faster, alerts to Telegram, Slack, ntfy and 90 more services, and public status pages, with history kept on a persistent volume.",
+  "description": "Uptime Kuma watches your websites and APIs around the clock and tells you the moment one goes down, through Telegram, Slack, ntfy, Pushover, webhooks and dozens of other services. Give your users a public status page with your own branding, and see response times and uptime history at a glance. Deploying it adds a persistent volume, so your monitors, alerts and months of history survive restarts and redeploys, with daily snapshots you can restore from the app's Volume tab. Nobody can claim your instance: the first start creates the admin account itself and prints the password once to the deploy log. It runs on a plan that never sleeps, so checks keep running when nobody is looking. Checks run from EU data centres over the web (HTTP and HTTPS, keywords, JSON, DNS and push monitors).",
+  "language": "Node",
+  "runtimeVersion": "22",
+  "accent": "#5CDD8B",
+  "tags": ["Monitoring", "Status pages", "Always on"],
+  "topics": ["uptime-kuma", "monitoring", "uptime", "status-page", "nodejs"],
+  "minMemoryMb": 512,
+  "alwaysOn": true,
+  "volume": { "mountPath": "/data", "limitGb": 5 }
+}

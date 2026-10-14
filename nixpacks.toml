@@ -1,0 +1,15 @@
+# Build settings for velixir's builder (Nixpacks).
+#
+# Nixpacks detects Node from package.json, installs with npm ci and runs `npm run build`
+# (build-kuma.js, which installs the pinned Uptime Kuma release). Naming the setup packages keeps
+# out what the builder might otherwise add: Uptime Kuma depends on playwright-core for its
+# optional "real browser" monitor, and there is no browser in this image (see the README).
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+aptPkgs = []
+
+# Straight to node rather than `npm run start`: npm and a shell in between do not pass SIGTERM
+# on, so Uptime Kuma would be killed instead of closing its database cleanly on every redeploy.
+# start.js forwards the signal to it.
+[start]
+cmd = "node start.js"

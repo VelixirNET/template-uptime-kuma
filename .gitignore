@@ -1,0 +1,7 @@
+node_modules/
+npm-debug.log*
+.env
+# Installed by `npm run build` from the pinned upstream release. Never committed.
+uptime-kuma/
+# Uptime Kuma's data when you run start.js on your own machine.
+.kuma-data/
