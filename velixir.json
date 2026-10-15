@@ -9,5 +9,6 @@
   "topics": ["uptime-kuma", "monitoring", "uptime", "status-page", "nodejs"],
   "minMemoryMb": 512,
   "alwaysOn": true,
+  "requiresVolume": true,
   "volume": { "mountPath": "/data", "limitGb": 5 }
 }
